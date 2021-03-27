@@ -1,0 +1,30 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.header {
+  padding: 20px;
+  background: #FF8C00;
+  color: white;
+  font-size: 40px;
+}
+
+textarea {
+  display: block;
+  margin: 1em 0;
+}
+
+.vertical {
+            border-left: 2px solid black;
+            height: 1000px;
+            position: absolute;
+            right: 50%;
+        }
+
+.p {
+  font-size: 10px;
+}
+
+.wt-img {
+  background-color: red;
+}

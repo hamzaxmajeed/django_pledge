@@ -1,0 +1,70 @@
+{% extends "impacts/base.html" %}
+{% load static %}
+
+{% block content %}
+
+<title>Bills</title>
+
+  <div class="row header">
+    <div class="col-sm-2" style="padding:10px">
+      <img src="{% static 'img/wind_turbine.png' %}" class="col-sm-12" alt="Wind Turbine Image">
+    </div>
+
+    <div class=" col-sm-10 text-left">
+      <h1 style="font-size:50px; font-weight:bold;">Clean Your Bills</h1>
+      <p style="font-size:20px;">Switch to green energy supplier: it takes minutes and cost the same but the benefits will live on for years. It's quick and easy to switch and doesn't have to hurt your ban account</p>
+      <p style="font-size:20px;">We'll send you more info and advice - including some of our top recommendations - once you've pledged.</p>
+      <a style="color:white; font-size:20px; text-decoration:underline" href="{% url 'impacts:home' %}">More info / advice</a>
+    </div>
+  </div>
+
+  <form action="{% url 'impacts:bills' %}" method="get">
+
+    {%  csrf_token %}
+    <div style="padding:25px;" class="row">
+      <div class="col-sm-12 col-md-8">
+
+        <label for="your_name">Name: </label>
+        <input id="your_name" type="text" name="name">
+
+        <p>Within the next two month, I pledge to switch from my current energy supplier - which is 
+          <select style="padding:10px;" class="form-select rounded" aria-label="Default select example" name="energy">
+            <option value="bog standard" selected>bog standard</option>
+            <option value="a great green tariff">a great green tariff</option>
+          </select> - to a green energy supplier.
+          <nobr><input style="height:30px" type="number" name="people" min="1" ></nobr>  people live in our home. My house is mainly heated by
+          <select style="padding:10px;" class="form-select rounded" aria-label="Default select example" name="heat">
+            <option selected>gas or oil</option>
+            <option value="electricity">electricity</option>
+          </select>
+        </p>
+
+        <p><b>Message: </b><br>Anything to say about yout pledge? This will be publicly visible.<span style="float: right;">Characters left: <span id="rchars">255</span></span></p>
+        <textarea name="message" class="form-control" type="text" id="textarea" value="" maxlength="255"></textarea>
+
+        <button class="btn btn-secondary" type="submit" ><i class="fas fa-search" aria-hidden="true" ></i>Pledge</button>
+
+        <p style="padding-top: 10px;">Pledging for a specific friend or organisation? <a href"{% url 'impacts:home' %}">Find them first</a></p>
+  </form>
+    </div>
+
+    <div style="border:1px solid black; height:auto;" class="col-sm-12 col-md-4 ">
+      <h3 class="text-center"><b>Impacts</b></h3>
+      <p>Saves</p>
+      <p style="font-size:20px;" class="text-center"><b style="color:#FF8C00;" >{{ impact }}kg</b> of CO2</p>
+      <p>Other impacts</p>
+      <p style="font-size:20px;" class="text-center"><i class="fas fa-camera"></i>Pollution</p>
+    </div>
+
+  </div>
+
+  <script>
+    var maxLength = 255;
+    $('textarea').keyup(function() {
+      var textlen = maxLength - $(this).val().length;
+      $('#rchars').text(textlen);
+    });
+  </script>
+
+
+{% endblock %}

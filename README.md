@@ -12,7 +12,7 @@ Using the design and requirements:
 
 - Created a url file inside impacts app and included that file from the url file of project. 
 
-- Made two Models. Bills and Veg model to save the pledges in db and list them on home page.
+- Made two Models: Bills and Veg model to save the pledges in db and list them on home page.
 
 - Created two different view functions and html pages, one for veg out pledge and one for clean your bills pledge.
 

@@ -1,18 +1,16 @@
 from django.test import TestCase
 from impacts.models import Bills, Veg
 
-# Create your tests here.
-
 class PledgeTest(TestCase):
     
     def setUpBills(self):
-        """ Setup for Clean Your Bills pledge. """
+        """ setup for Clean Your Bills pledge. """
         impact = 49 * 0.5 * 5 * 2
         Bills.objects.create(name='Name1', energy_supplier='bog standard',
             num_of_people=2, heating_source='gas or oil', message="Save Energy", impact=impact)
 
     def setUpVeg(self):
-        """ Setup for Veg Out pledge. """
+        """ setup for Veg Out pledge. """
         co_impact = 0.884 * 2.5 * 8.7
         water_impact = 0.75 * 6
         waste_impact = 0.2 * 6 * 2.5

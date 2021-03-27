@@ -13,7 +13,7 @@
 
   <div style="padding-left:10px;" class="row">
     <div class="col-sm-12">
-      <h2><b>Select A Pledge</b></h2>
+      <h2><b>Select a Pledge</b></h2>
       <h3><a href="{% url 'impacts:bills' %}">Clean Your Bills</a></h3>
       <h3><a href="{% url 'impacts:veg' %}">Veg Out</a></h3>
     </div>
@@ -22,7 +22,7 @@
   <div style="padding-left:10px;" class="row">
     <div class="col-sm-12 ">
       
-      <h2><b>List Of Pledges</b></h2>
+      <h2><b>List of Pledges</b></h2>
 
       {% for bill in bills %}
         <p><b>Name: </b>{{ bill.name }}</p>

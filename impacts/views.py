@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.core.exceptions import ObjectDoesNotExist
 from .models import Bills, Veg
 
-# Function based views
+# function based views
 def home(request):
     """
     displays all pledges data fields

@@ -25,10 +25,10 @@
       <div class="col-sm-12 col-md-8">
 
         <label for="your_name">Name: </label>
-        <input id="your_name" type="text" name="name">
+        <input id="your_name" type="text" name="name" required>
         
         <p>At the moment, I munch on 
-          <input style="height:30px" type="number" name="current" min="1" ></nobr>  meaty meals each week. For the next two months, I pledge to go veg for
+          <input style="height:30px" type="number" name="current" min="1" required> meaty meals each week. For the next two months, I pledge to go veg for
           <select style="padding:10px;" class="form-select rounded" aria-label="Default select example" name="veggie">
             <option selected>0-5</option>
             <option value="6">6</option>
@@ -38,8 +38,8 @@
         <p><b>Message:</b><br>Anything to say about yout pledge? This will be publicly visible. <span style="float: right;">Characters left: <span id="rchars">255</span></span></p>
 
 
-        <textarea name="message" class="form-control" type="text" id="textarea" value="" maxlength="255"></textarea>
-        <button class="btn btn-secondary" type="submit" ><i class="fas fa-search"aria-hidden="true" ></i>Pledge</button>
+        <textarea name="message" class="form-control" type="text" id="textarea" value="" maxlength="255" required></textarea>
+        <button class="btn btn-secondary" type="submit"><i class="fas fa-search"aria-hidden="true"></i>Pledge</button>
 
         <p style="padding-top: 10px;">Pledging for a specific friend or organisation? <a href"{% url 'impacts:home' %}">Find them first</a></p>
   </form>
@@ -57,6 +57,7 @@
 
   </div>
 
+  <!-- To keep track of characters in message textarea -->
   <script>
     var maxLength = 255;
     $('textarea').keyup(function() {

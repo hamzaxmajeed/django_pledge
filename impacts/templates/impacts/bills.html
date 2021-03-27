@@ -25,14 +25,14 @@
       <div class="col-sm-12 col-md-8">
 
         <label for="your_name">Name: </label>
-        <input id="your_name" type="text" name="name">
+        <input id="your_name" type="text" name="name" required>
 
         <p>Within the next two month, I pledge to switch from my current energy supplier - which is 
           <select style="padding:10px;" class="form-select rounded" aria-label="Default select example" name="energy">
             <option value="bog standard" selected>bog standard</option>
             <option value="a great green tariff">a great green tariff</option>
           </select> - to a green energy supplier.
-          <nobr><input style="height:30px" type="number" name="people" min="1" ></nobr>  people live in our home. My house is mainly heated by
+          <input style="height:30px" type="number" name="people" min="1" required> people live in our home. My house is mainly heated by
           <select style="padding:10px;" class="form-select rounded" aria-label="Default select example" name="heat">
             <option selected>gas or oil</option>
             <option value="electricity">electricity</option>
@@ -40,9 +40,9 @@
         </p>
 
         <p><b>Message: </b><br>Anything to say about yout pledge? This will be publicly visible.<span style="float: right;">Characters left: <span id="rchars">255</span></span></p>
-        <textarea name="message" class="form-control" type="text" id="textarea" value="" maxlength="255"></textarea>
+        <textarea name="message" class="form-control" type="text" id="textarea" value="" maxlength="255" required></textarea>
 
-        <button class="btn btn-secondary" type="submit" ><i class="fas fa-search" aria-hidden="true" ></i>Pledge</button>
+        <button class="btn btn-secondary" type="submit"><i class="fas fa-search" aria-hidden="true"></i>Pledge</button>
 
         <p style="padding-top: 10px;">Pledging for a specific friend or organisation? <a href"{% url 'impacts:home' %}">Find them first</a></p>
   </form>
@@ -58,6 +58,7 @@
 
   </div>
 
+  <!-- To keep track of characters in message textarea -->
   <script>
     var maxLength = 255;
     $('textarea').keyup(function() {

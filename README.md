@@ -2,7 +2,7 @@
 
 ## About
 
-Using the design and requirements:
+Using the design requirements:
 
 - Created an application that allows individuals to pledge to do an action to improve their lives and make an environmental impact. 
 

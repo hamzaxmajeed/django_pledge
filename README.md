@@ -24,15 +24,15 @@ If I had more time, I would make the following changes or improvements:
 
 - Adding a login authentication functionality for each user that makes a pledge.
 
-- Making the application mobile first.
+- Making the application responsive and mobile friendly.
 
 - Creating a dynamic header title that changes based on what page we're on rather than hard coding it.
 
-- Creating a better UI by styling.
+- Creating a better UI.
 
 - Cleaning HTML templates by writing code that allows better readability.
 
-- Do further unit testing in tests.py, including some edge cases and more variations of pledges.
+- Do further unit testing in tests.py, including some edge cases and more variations for each pledge.
 
 ## Setup
 

@@ -38,7 +38,7 @@ class Veg(models.Model):
     co_impact = models.DecimalField(max_digits=10, decimal_places=3)
     water_impact = models.DecimalField(max_digits=10, decimal_places=3)
     waste_impact = models.DecimalField(max_digits=10, decimal_places=3)
-    message = models.TextField(blank=True )
+    message = models.TextField(blank=True)
 
     def __str__(self):
         """

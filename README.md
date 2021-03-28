@@ -1,4 +1,4 @@
-# Do Nation Task on Pledges
+# Do Nation Pledges
 
 ## About
 
@@ -32,7 +32,7 @@ If I had more time, I would make the following changes or improvements:
 
 - Cleaning HTML templates by writing code that allows better readability.
 
-- Do further unit testing.
+- Do further unit testing in tests.py, including some edge cases and more variations of pledges.
 
 ## Setup
 
